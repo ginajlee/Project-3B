@@ -1,4 +1,3 @@
-# Project-3B
 Explore Zillow Prize 
 • Go to https://www.kaggle.com/c/zillow-prize-1 to read the details of Zillow Prize competition.
 • In the data, the main interest is its forecast error:
