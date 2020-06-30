@@ -1,9 +1,5 @@
-# B) (answer at bottom of code)
-
 # Zillow Data Exploratory Analysis
 # Adapted from https://www.kaggle.com/c/zillow-prize-1/kernels
-
-setwd("C:/Users/wyu/documents/zip08/2018 Q4 Fall_XData/Project/project3/zillow")
 
 install.packages("DT")  
 install.packages("corrplot")  
@@ -360,18 +356,3 @@ properties <- properties %>% mutate(census = as.character(rawcensustractandblock
 # 6111 Ventura County
 # For example "6037 8002.04" lets look up some information:
 # https://www.ffiec.gov/census/report.aspx?year=2016&county=037&tract=8002.04&state=06&report=demographic
-
-
-
-Fit1 = lm (abs_logerror ~ tax_property + area_live_finished + num_garage + num_bedroom + num_bathroom, data=cor_tmp)
-summary(Fit1)
-# This linear regression shows that the log error, tax property, area live finished, and number of
-#bathrooms are significant since their p values are much less than 0.05. These 4 variables have 
-#a significant relationship. The number of bedrooms is also pretty significant with a p value
-#of 0.02. However, the adjusted R-squared is low at 0.005. This means that 
-#this regression does not explain the variance in the response variable well.
-
-Fit2 = lm (logerror ~ tax_property + area_live_finished + num_garage + num_bedroom + num_bathroom, data=cor_tmp)
-summary(Fit2)
-# This linear regression shows that the tax property and area live finished are significant due to
-#p values that are less than 0.05. In this case as well, the adjusted R-squared in low at 0.003.
